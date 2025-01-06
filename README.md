@@ -2,7 +2,7 @@
 
 ## Problem Statement ##
 
-Given a list of sorted integers in descending order, find the position of a given number.
+Given a list of sorted integers in descending order, find the position of a given number. Minimize the number of times you access the elements of the lit.
 
 ## Input ##
 
