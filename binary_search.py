@@ -10,4 +10,4 @@ def binary_search(cards: List[int], query: int)-> int:
         int: _Position of the given number_
     """
     position: int = 0
-    return position
+    return -1
