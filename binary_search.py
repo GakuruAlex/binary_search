@@ -13,18 +13,19 @@ def binary_search(cards: List[int], query: int)-> int:
 
     while low <= high:
         mid = (low + high) // 2
-        if cards[mid] == query:
-            result = 
-        elif cards[mid] < query:
+        
+        result = condition(cards=cards, mid=mid, query=query)
+
+        if result == "left":
             high = mid - 1
-        else:
+        elif result == "right":
             low = mid + 1
+        else:
+            return mid
     return -1
 def condition(cards: List[int], mid: int, query: int):
         if cards[mid] == query and cards[mid - 1] == query:
             return 'left'
-        elif cards[mid] and cards[mid + 1] == query:
-            return 'right'
         elif cards[mid] < query:
             return 'left'
         elif cards[mid] > query:
