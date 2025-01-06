@@ -1,5 +1,17 @@
 # Binary Search #
 
+For a list of sorted numbers in decreasing order
+
+1.Determine the middle number of the list
+
+2.If it matches the target , return the middle index as the answer
+
+3.If the target is greater than the middle number, search the first half of the list
+
+4.If the target is less than the middle number, search the second half number of the list.
+
+5.If no more elements remain return -1
+
 ## Problem Statement ##
 
 Given a list of sorted integers in descending order, find the position of a given number. Minimize the number of times you access the elements of the lit.
@@ -36,6 +48,10 @@ Position: Index of number in the list i.e 7 (counting from 0) for query=2 in lis
 9.) List contains negative integers
 
 10.)List contains both positive and negative numbers
+
+11.) A query that doesn't exist that would have been at the start of the list i.e greater than all the existing numbers
+
+12.) A query that doesn't exist that would have been at the end of the list i.e smaller than all the existing numbers
 
     tests = [
 
