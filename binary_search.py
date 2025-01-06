@@ -9,5 +9,14 @@ def binary_search(cards: List[int], query: int)-> int:
     Returns:
         int: _Position of the given number_
     """
-    position: int = 0
+    low, high = 0, len(cards) - 1
+    mid = (high - low) // 2
+    while mid < len(cards):
+        if cards[mid] == query:
+            return mid
+        elif cards[mid] < query:
+            high = mid
+        else:
+            low = mid
+        
     return -1
