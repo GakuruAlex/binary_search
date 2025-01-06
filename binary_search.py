@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Literal
 def binary_search(cards: List[int], query: int)-> int:
     """_Determine the index of a given number in a list of sorted integers in descending order_
 
@@ -35,7 +35,7 @@ def binary_search(cards: List[int], query: int)-> int:
         return 0 if cards[0] == query else -1
     else:
         return -1
-def condition(cards: List[int], mid: int, query: int):
+def condition(cards: List[int], mid: int, query: int)->Literal['left', 'right', 'found']:
         """_Determine whether search space is left of the middle value , right of middle value or if target has been found._
 
         Args:
@@ -45,6 +45,14 @@ def condition(cards: List[int], mid: int, query: int):
 
         Returns:
             _str_: _left if query is equal to middle number and query is equal to number preceeding middle number or query is greater than middle number, right if query is less than middle number, found if number is equal_
+        
+        Example:
+            >>> condition([10, 9, 8, 7, 6, 4, 3, 1], 7, 9)
+            'left'
+            >>> condition([10, 9, 8, 7, 6, 4, 3, 1], 7, 3)
+            'right'
+            >>> condition([10, 9, 8, 7, 6, 4, 3, 1], 7, 7)
+            'found'
         """
         middle_number = cards[mid]
         preceeding_number = cards[mid - 1]
