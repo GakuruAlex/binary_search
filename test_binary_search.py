@@ -13,7 +13,8 @@ from binary_search import binary_search
     ([-1, -2, -4, -6, -7, -9, -10, -12, -15, -20], -7, 4),
     ([10, 8, 7, 6, 4, 3, 1, 0, -1, -2, -4, -5, -6], -6, 12),
     ([24, 16, 13, 11, 9, 8, 5, 2], 30, -1),
-    ([24, 16, 13, 11, 9, 8, 5, 2], -12, -1)
+    ([24, 16, 13, 11, 9, 8, 5, 2], -12, -1),
+    ([24, 24, 24, 16, 10, 8, -5, -9], 24, 0),
 ])
 def test_binary_search(cards, query, position):
     assert binary_search(cards, query) == position
